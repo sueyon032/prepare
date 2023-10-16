@@ -1,0 +1,26 @@
+body{
+    margin:0;
+    padding:0;
+}
+
+button{
+    border:0;
+    background-color:transparent;
+}
+
+*{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.map-png{
+    width:100%;
+    height:auto;
+}
+
+.png1{
+     position: absolute;
+     left: 1280px;
+     top: 135px;
+}
