@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prepare</title>
+    <link rel="stylesheet" th:href="@{/css/index.css}">
+</head>
+<body>
+<div class="join container">
+    <div class="logo">
+        <img th:src="@{/images/logo.png}" alt="Logo">
+    </div>
+
+    <div class="login container">
+        <div class="title">prepare</div>
+
+        <div>
+            <input type="text" placeholder="Id" class="id-btn" th:name="memberId">
+            <input type="password" placeholder="Password" class="pw-btn" th:name="memberPw">
+        </div>
+
+<!--        <form th:action="@{/login}" method="post">-->
+            <button type="submit" class="loginBtn" id="loginBtn">
+                <div class="login-btn">Login</div>
+            </button>
+<!--        </form>-->
+
+        <div class="social container">
+            <button><img th:src="@{/images/social1_btn.png}" alt="Social Button 1"></button>
+            <button><img th:src="@{/images/social2_btn.png}" alt="Social Button 2"></button>
+        </div>
+        <div class="sign container">
+            <div class="sign-btn1">Don’t have an account?</div>
+            <div class="sign-btn2">&nbsp;<a th:href="@{/join}">Sign up</a> </div>
+        </div>
+    </div>
+</div>
+
+<script th:src="@{/js/index.js}"></script>
+</body>
+</html>

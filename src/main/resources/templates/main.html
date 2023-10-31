@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title th:text="${pageTitle}">Default Title</title>
+  <link th:href="@{/css/main.css}" rel="stylesheet">
+</head>
+<body>
+<img th:src="@{/images/map.png}" class="map-png">
+
+<button class="png1">
+  <img th:src="@{/images/japan.png}"><br>
+  일본
+</button>
+
+<script th:src="@{/js/main.js}"></script>
+</body>
+</html>

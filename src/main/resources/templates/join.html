@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Prepare</title>
+  <link rel="stylesheet" th:href="@{/css/index.css}">
+</head>
+<body>
+<div class="join container">
+  <div class="logo">
+    <img th:src="@{/images/logo.png}" alt="Logo">
+  </div>
+
+  <div class="login container">
+    <div class="title">join with us!</div>
+    <div>
+      <input type="text" placeholder="Id" class="id-btn" th:name="memberId">
+      <input type="password" placeholder="Password" class="pw-btn" th:name="memberPw">
+    </div>
+<!--    <form th:action="@{/index}" method="post">-->
+      <button type="submit" class="loginBtn" id="joinBtn">
+        <div class="login-btn">Join</div>
+      </button>
+<!--    </form>-->
+  </div>
+</div>
+
+<script th:src="@{/js/join.js}"></script>
+
+</body>
+</html>
