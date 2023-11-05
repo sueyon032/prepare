@@ -16,8 +16,15 @@ repositories {
 }
 
 dependencies {
+	compileOnly 'org.projectlombok:lombok:1.18.26' //database
+	annotationProcessor 'org.projectlombok:lombok:1.18.26'//database
+
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa:3.0.2'//database
+	implementation 'mysql:mysql-connector-java:8.0.32'//database
+
 	implementation 'org.springframework.boot:spring-boot-starter-web'
-	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'	// thymeleaf
+	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+    implementation 'org.projectlombok:lombok:1.18.26'// thymeleaf
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 

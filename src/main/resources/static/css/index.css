@@ -27,16 +27,16 @@ button {
     column-gap: 200px;
 }
 
-.logo {
+.logoContainer {
     margin-left: 240px;
 }
 
-.logo img {
+.logoContainer img {
     width: 380px;
     height: auto;
 }
 
-.login {
+.loginContainer {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -63,11 +63,11 @@ input {
     color: #B5B5B5;
 }
 
-.loginBtn {
+.loginBtnContainer {
     margin-top: 50px;
 }
 
-.login-btn {
+.loginBtnText {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -80,12 +80,12 @@ input {
     height: 53px;
 }
 
-.social {
+.socialContainer {
     display: flex;
     column-gap: 60px;
 }
 
-.sign {
+.signContainer {
     display: flex;
 }
 

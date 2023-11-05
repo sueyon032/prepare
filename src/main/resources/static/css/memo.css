@@ -1,0 +1,47 @@
+body{
+    margin:0;
+    padding:0;
+}
+
+.memoContainer{
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    height: 90vh;
+    gap:100px;
+    font-size:15px;
+}
+
+.memos{
+    display:flex;
+    flex-direction:column;
+}
+
+.memosText{
+    margin-left:30px;
+}
+
+.memo1Container{
+    display:flex;
+    flex-direction:column;
+    gap:32px;
+}
+
+textarea {
+    border-radius:15px;
+    border-color:#B4B4B4;
+    color:#B4B4B4;
+    padding: 15px;
+    font-size:18px;
+    resize: none;
+}
+
+.memo1Container textarea {
+    width:485px;
+    height: 180px;
+}
+
+.memo2Container textarea {
+    width:485px;
+    height: 445px;
+}

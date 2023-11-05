@@ -8,19 +8,18 @@ button{
     background-color:transparent;
 }
 
-*{
+.mapContainer{
     display:flex;
     justify-content:center;
-    align-items:center;
 }
 
-.map-png{
-    width:100%;
-    height:auto;
+.mapPng{
+    width:1280px;
+    height:600px;
 }
 
 .png1{
      position: absolute;
      left: 1280px;
-     top: 135px;
+     top: 120px;
 }
