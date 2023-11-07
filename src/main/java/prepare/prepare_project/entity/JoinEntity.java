@@ -1,5 +1,6 @@
 package prepare.prepare_project.entity;
 
+
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -20,13 +21,12 @@ public class JoinEntity { //table 역할
     private String memberId;
 
     @Column
-    private String memberPassword;
-
+    private String memberPw;
     public static JoinEntity toJoinEntity(JoinDTO joinDTO){
         JoinEntity joinEntity = new JoinEntity();
         joinEntity.setId(joinDTO.getId());
         joinEntity.setMemberId(joinDTO.getMemberId());
-        joinEntity.setMemberPassword(joinDTO.getMemberPassword());
+        joinEntity.setMemberPw(joinDTO.getMemberPw());
         return joinEntity;
     }
 

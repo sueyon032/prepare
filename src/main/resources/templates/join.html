@@ -14,10 +14,9 @@
   <div class="loginContainer">
     <div class="title">join with us!</div>
     <div>
-      <form action="/join" method="post" th:object="${joinDTO}">
-        <input type="text" placeholder="Id" class="idBtn" name="memberEmail" th:field="*{memberId}">
-        <input type="password" placeholder="Password" class="pw-btn" name="memberPassword" th:field="*{memberPassword}">
-        <!-- 다른 필드들도 필요한 경우 여기에 추가 -->
+      <form action="/join" method="post">
+        <input type="text" placeholder="Id" class="idBtn" name="memberEmail" th:name="memberId">
+        <input type="password" placeholder="Password" class="pw-btn" name="memberPassword" th:name="memberPw">
 
         <button type="submit" class="loginBtnContainer" id="joinBtn">
           <div class="loginBtnText">Join</div>

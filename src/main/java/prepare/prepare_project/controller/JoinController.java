@@ -1,6 +1,8 @@
 package prepare.prepare_project.controller;
 
+import jakarta.servlet.http.HttpSession;
 import lombok.RequiredArgsConstructor;
+import org.hibernate.mapping.Join;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,16 +16,9 @@ import prepare.prepare_project.service.JoinService;
 public class JoinController {
 
     private final JoinService joinService;
-//    @GetMapping("/join")
-//    public String showIndexPage() {
-//        return "join";
-//    }
-
     @GetMapping("/join")
-    public String joinForm(Model model) {
-        JoinDTO joinDTO = new JoinDTO();
-        model.addAttribute("joinDTO", joinDTO);
-        return "join"; // Thymeleaf 템플릿 이름
+    public String joinForm() {
+        return "join";
     }
 
     @PostMapping("/join")
@@ -33,6 +28,24 @@ public class JoinController {
         joinService.save(joinDTO);
 
         return "index";
+    }
+
+    @GetMapping("/index-form")
+    public String loginForm(){
+        return "index";
+    }
+
+    @PostMapping("/index") // session : 로그인 유지
+    public String login(@ModelAttribute JoinDTO joinDTO, HttpSession session) {
+        JoinDTO loginResult = joinService.login(joinDTO);
+        if (loginResult != null) {
+            // login 성공
+            session.setAttribute("loginId", loginResult.getMemberId());
+            return "main";
+        } else {
+            // login 실패
+            return "index";
+        }
     }
 
 }
