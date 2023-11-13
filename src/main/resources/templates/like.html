@@ -12,10 +12,10 @@
 <div class="boxesContainer">
     <div class="boxess">
         <div class="boxes">
-            <div class="box">
-                <img th:src="@{/images/japan.png}" class="boxImg"><br>
-                <div class="country">일본</div>
-                <div class="area">아시아</div>
+            <div class="box" th:each="countryInfo : ${countryInfoList}">
+                <img th:src="@{/images/} + ${countryInfo.cImg}" class="boxImg"><br>
+                <div class="country" th:text="${countryInfo.cName}"></div>
+                <div class="area" th:text="${countryInfo.cArea}"></div>
             </div>
             <div class="box"></div>
             <div class="box"></div>
