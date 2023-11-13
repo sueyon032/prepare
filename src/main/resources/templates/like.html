@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Prepare</title>
+    <link rel="stylesheet" th:href="@{/css/like.css}">
+    <link th:href="@{/css/nav.css}" rel="stylesheet">
+
+    <link th:href="@{/images/logo.png}" rel="icon">
+</head>
+<body>
+<div class="boxesContainer">
+    <div class="boxess">
+        <div class="boxes">
+            <div class="box">
+                <img th:src="@{/images/japan.png}" class="boxImg"><br>
+                <div class="country">일본</div>
+                <div class="area">아시아</div>
+            </div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+        <div class="boxes">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+    </div>
+</div>
+
+<div class="footerNav">
+    <footer>
+        <nav class="footerNavbar">
+            <ul>
+                <li><a th:href="@{/like}"><i class="bi bi-heart"></i></a></li>
+                <li><a th:href="@{/main}"><i class="bi bi-airplane-fill"></i></a></li>
+                <li><a th:href="@{/memo}"><i class="bi bi-pencil-square"></i></a></li>
+            </ul>
+        </nav>
+    </footer>
+</div>
+</body>
+</html>
