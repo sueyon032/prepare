@@ -6,16 +6,16 @@
     position: absolute;
     bottom: 0;
     margin-bottom:20px;
-    width: 95%;
+    width: 99%;
 }
 
 footer {
-  text-align: center;
   width:250px;
   height:40px;
   border-radius:50px;
   display:flex;
   justify-content:center;
+  align-items:center;
    border: 1px solid #E0E0E0;
 }
 
