@@ -2,23 +2,25 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
   <meta charset="UTF-8">
-  <title th:text="${pageTitle}">Default Title</title>
+  <title>Prepare</title>
   <link th:href="@{/css/main.css}" rel="stylesheet">
   <link th:href="@{/css/nav.css}" rel="stylesheet">
+
+  <link rel="icon" th:href="@{/images/logo.png}">
 </head>
 <body>
-<div class="mapContainer"><img th:src="@{/images/map.png}" class="mapPng"></div>
-
-<button class="png1">
-  <img th:src="@{/images/japan.png}"><br>
-  일본
-</button>
+<div class="mapContainer"><img th:src="@{/images/map.png}" class="mapPng">
+  <button th:each="countryInfo : ${countryInfoList}" th:style="'position: absolute; top: ' + ${countryInfo.lTop} + 'px; left: ' + ${countryInfo.lLeft} + 'px;'">
+    <img th:src="@{/images/} + ${countryInfo.cImg}" class="countryImg"><br>
+    <div th:text="${countryInfo.cName}"></div>
+  </button>
+</div>
 
 <div class="footerNav">
   <footer>
     <nav class="footerNavbar">
       <ul>
-        <li><a href="#"><i class="bi bi-heart"></i></a></li>
+        <li><a th:href="@{/like}"><i class="bi bi-heart"></i></a></li>
         <li><a th:href="@{/main}"><i class="bi bi-airplane-fill"></i></a></li>
         <li><a th:href="@{/memo}"><i class="bi bi-pencil-square"></i></a></li>
       </ul>

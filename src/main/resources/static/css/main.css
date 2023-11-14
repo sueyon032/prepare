@@ -18,8 +18,8 @@ button{
     height:600px;
 }
 
-.png1{
-     position: absolute;
-     left: 1280px;
-     top: 120px;
+.countryImg {
+   width:40px;
+   height:40px;
+   border-radius:5px;
 }
