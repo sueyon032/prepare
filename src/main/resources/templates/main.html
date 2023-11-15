@@ -26,7 +26,10 @@
     <div class="modal_body">
       <div class="countryInfo" th:each="countryInfo, status : ${countryInfoList}">
         <div th:if="${countryInfo != null}" th:id="'modalCountryInfo' + ${status.index}">
-          <div class="cName" th:text="${countryInfo.cName}"></div>
+          <div class="modalHeader">
+            <div class="cName" th:text="${countryInfo.cName}"></div>
+            <button><i class="bi bi-heart"></i></button>
+          </div>
           <div class="basic">
             <div class="bTitle">기본 정보</div>
             <div class="bInfoContainer">
