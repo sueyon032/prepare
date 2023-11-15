@@ -22,11 +22,69 @@
 </div>
 
 <div class="modal" id="countryModal">
-  <div class="modal_body">
-    <div th:each="countryInfo, status : ${countryInfoList}">
-      <div th:if="${countryInfo != null}" th:id="'modalCountryInfo' + ${status.index}" style="display: none;">
-        <div th:text="${countryInfo.cName}"></div>
-        <div th:text="${countryInfo.cArea}"></div>
+  <div class="modalContainer">
+    <div class="modal_body">
+      <div class="countryInfo" th:each="countryInfo, status : ${countryInfoList}">
+        <div th:if="${countryInfo != null}" th:id="'modalCountryInfo' + ${status.index}">
+          <div class="cName" th:text="${countryInfo.cName}"></div>
+          <div class="basic">
+            <div class="bTitle">기본 정보</div>
+            <div class="bInfoContainer">
+              <img class="bImg" th:src="@{/images/} + ${countryInfo.bFlag}">
+              <div th:utext="${countryInfo.bCapital + '<br>' + countryInfo.bLanguage + '<br>' + countryInfo.bMoney + '<br>' + countryInfo.bClimate + '<br>' + countryInfo.bReligion}"></div>
+            </div>
+          </div>
+
+          <div class="basicPre">
+            <div class="bTitle">여행 준비</div>
+            <div class="bPreContainer">
+              <div class="preBox">
+                <img class="BoxIcon" th:src="@{/images/icon/flight.png}">
+                항공
+                <div class="preText" th:text="${countryInfo.pFlight}"></div>
+              </div>
+              <div class="preBox">
+                <img class="BoxIcon" th:src="@{/images/icon/visa.png}">
+                비자
+                <div class="preText" th:text="${countryInfo.pVisa}"></div>
+              </div>
+              <div class="preBox">
+                <img class="BoxIcon" th:src="@{/images/icon/rate.png}">
+                환율
+                <div class="preText" th:text="${countryInfo.pRate}+'원'"></div>
+              </div>
+              <div class="preBox">
+                <img class="BoxIcon" th:src="@{/images/icon/price.png}">
+                물가
+                <div class="preText" th:text="${countryInfo.pPrice}"></div>
+              </div>
+              <div class="preBox">
+                <img class="BoxIcon" th:src="@{/images/icon/time.png}">
+                시차
+                <div class="preText" th:text="${countryInfo.pTime}"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="basicRe">
+            <div class="bTitle">여행지 추천</div>
+            <div class="bReContainer">
+              <div class="ReBox">
+                <img th:src="@{/images/} + ${countryInfo.rPlaceImg1}">
+                <div th:text="${countryInfo.rPlaceName1}"></div>
+              </div>
+              <div class="ReBox">
+                <img th:src="@{/images/} + ${countryInfo.rPlaceImg2}">
+                <div th:text="${countryInfo.rPlaceName2}"></div>
+              </div>
+              <div class="ReBox">
+                <img th:src="@{/images/} + ${countryInfo.rPlaceImg3}">
+                <div th:text="${countryInfo.rPlaceName3}"></div>
+              </div>
+            </div>
+
+          </div>
+        </div>
       </div>
     </div>
   </div>

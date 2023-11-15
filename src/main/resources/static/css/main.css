@@ -34,19 +34,107 @@ button{
     background-color: rgba(0, 0, 0, 0.4);
 }
 
-.modal_body{
-    display:flex;
-    align-items:center;
-    justify-content:center
-    background-color:white;
-    width:500px;
-    height:500px;
-}
-
-.countryInfo {
-    margin: auto;
+.modalContainer{
     display: flex;
     align-items: center;
     justify-content: center;
+    height:93%;
+}
+
+.modal_body {
+  width:1000px;
+  max-height:550px;
+  background-color:white;
+  overflow-y: scroll;
+}
+
+.modal_body::-webkit-scrollbar {
+    display: none;
+}
+
+.cName{
+    font-size:30px;
+    margin: 20px 0 20px 30px;
+}
+
+.basic{
+    background-color:#F5FBFF;
+    width:1000px;
+    height:175px;
+    margin-bottom:35px;
+}
+
+.bTitle{
+    padding-left:15px;
+    padding-top:10px;
+    padding-bottom:8px;
+    font-size:20px;
+    color:#B1B1B1;
+}
+
+.bInfoContainer{
+    display:flex;
+}
+
+.bImg{
+    margin-left:50px;
+    margin-right: 30px;
+}
+
+.basicPre{
+    background-color:#F5FBFF;
+    width:1000px;
+    height:200px;
+    margin-bottom:35px;
+}
+
+.preBox{
     background-color:white;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    color:#B1B1B1;
+    border-radius:20px;
+    width:145px;
+    height:130px;
+}
+
+.bPreContainer{
+    display:flex;
+    justify-content:center;
+    gap:40px;
+}
+
+.BoxIcon{
+    width:50px;
+    height:50px;
+}
+
+.preText{
+    margin-top:10px;
+    color:black;
+}
+
+.basicRe{
+    background-color:#F5FBFF;
+    width:1000px;
+    height:300px;
+}
+
+.ReBox{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+.bReContainer {
+    display: flex;
+    justify-content: center;
+    gap: 70px;
+}
+
+.ReBox img{
+    border-radius:500px;
+    width:200px;
 }
