@@ -4,11 +4,12 @@ body{
 }
 
 .memoContainer{
+    margin-top:50px;
     display:flex;
     justify-content:center;
     align-items: center;
-    height: 90vh;
-    gap:100px;
+    height: 75vh;
+    gap:80px;
     font-size:15px;
 }
 
@@ -38,10 +39,20 @@ textarea {
 
 .memo1Container textarea {
     width:485px;
-    height: 180px;
+    height: 170px;
 }
 
 .memo2Container textarea {
     width:485px;
-    height: 445px;
+    height: 440px;
+}
+
+.saveBtn{
+    background-color:#E1F4FF;
+    border:0;
+    border-radius:50px;
+    width:100px;
+    height:30px;
+    float: right;
+    margin-right:200px;
 }
