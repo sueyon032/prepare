@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <title>Prepare</title>
     <link rel="stylesheet" th:href="@{/css/index.css}">
+
+    <link rel="icon" th:href="@{/images/logo.png}">
 </head>
 
 <body>
@@ -29,8 +31,10 @@
         </form>
 
         <div class="socialContainer">
-            <button><img th:src="@{/images/social1_btn.png}" alt="Social Button 1"></button>
-            <button><img th:src="@{/images/social2_btn.png}" alt="Social Button 2"></button>
+            <a href="https://kauth.kakao.com/oauth/authorize?response_type=code&client_id=9418661f85635eda56d4e525ff0549c1&redirect_uri=https%3A%2F%2Flocalhost%3A8080%2Fjoin%2Fkakao&response_type=code">
+                <img th:src="@{/images/social1_btn.png}">
+            </a>
+            <a><img th:src="@{/images/social2_btn.png}"></a>
         </div>
         <div class="signContainer">
             <div class="sign-btn1">Don’t have an account?</div>
