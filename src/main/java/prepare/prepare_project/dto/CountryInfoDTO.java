@@ -22,10 +22,14 @@ public class CountryInfoDTO {
     private Integer LLeft;
     private Integer LTop;
 
-    private String bInfo;
+    private String bCapital;
+    private String bLanguage;
+    private String bMoney;
+    private String bClimate;
+    private String bReligion;
     private String bFlag;
 
-    private String pFight;
+    private String pFlight;
     private String pVisa;
     private Double pRate;
     private String pPrice;
@@ -48,10 +52,14 @@ public class CountryInfoDTO {
         countryInfoDTO.setLLeft(countryInfoEntity.getLLeft());
         countryInfoDTO.setLTop(countryInfoEntity.getLTop());
 
-        countryInfoDTO.setBInfo(countryInfoEntity.getBInfo());
+        countryInfoDTO.setBCapital(countryInfoEntity.getBCapital());
+        countryInfoDTO.setBLanguage(countryInfoEntity.getBLanguage());
+        countryInfoDTO.setBMoney(countryInfoEntity.getBMoney());
+        countryInfoDTO.setBClimate(countryInfoEntity.getBClimate());
+        countryInfoDTO.setBReligion(countryInfoEntity.getBReligion());
         countryInfoDTO.setBFlag(countryInfoEntity.getBFlag());
 
-        countryInfoDTO.setPFight(countryInfoEntity.getPFight());
+        countryInfoDTO.setPFlight(countryInfoEntity.getPFlight());
         countryInfoDTO.setPVisa(countryInfoEntity.getPVisa());
         countryInfoDTO.setPRate(countryInfoEntity.getPRate());
         countryInfoDTO.setPPrice(countryInfoEntity.getPPrice());

@@ -34,13 +34,25 @@ public class CountryInfoEntity { //table 역할
     private Integer lTop; // 메인/나라위치
 
     @Column
-    private String bInfo; // 기본정보/텍스트
+    private String bCapital; // 기본정보/수도
+
+    @Column
+    private String bLanguage; // 기본정보/언어
+
+    @Column
+    private String bMoney; // 기본정보/화폐
+
+    @Column
+    private String bClimate; // 기본정보/기후
+
+    @Column
+    private String bReligion; // 기본정보/종교
 
     @Column
     private String bFlag; // 기본정보/국기
 
     @Column
-    private String pFight; // 여행준비/항공
+    private String pFlight; // 여행준비/항공
 
     @Column
     private String pVisa; // 여행준비/비자
@@ -80,10 +92,14 @@ public class CountryInfoEntity { //table 역할
         countryInfoEntity.setLLeft(countryInfoDTO.getLLeft());
         countryInfoEntity.setLTop(countryInfoDTO.getLTop());
 
-        countryInfoEntity.setBInfo(countryInfoDTO.getBInfo());
+        countryInfoEntity.setBCapital(countryInfoDTO.getBCapital());
+        countryInfoEntity.setBLanguage(countryInfoDTO.getBLanguage());
+        countryInfoEntity.setBMoney(countryInfoDTO.getBMoney());
+        countryInfoEntity.setBClimate(countryInfoDTO.getBClimate());
+        countryInfoEntity.setBReligion(countryInfoDTO.getBReligion());
         countryInfoEntity.setBFlag(countryInfoDTO.getBFlag());
 
-        countryInfoEntity.setPFight(countryInfoDTO.getPFight());
+        countryInfoEntity.setPFlight(countryInfoDTO.getPFlight());
         countryInfoEntity.setPVisa(countryInfoDTO.getPVisa());
         countryInfoEntity.setPRate(countryInfoDTO.getPRate());
         countryInfoEntity.setPPrice(countryInfoDTO.getPPrice());
