@@ -12,7 +12,7 @@
 <div class="boxesContainer">
     <div class="boxess">
         <div class="boxes">
-            <div class="box" th:each="countryInfo : ${countryInfoList}">
+            <div class="box" th:each="countryInfo : ${countryInfoList}" th:if="${countryInfo.cName == '미국'}">
                 <img th:src="@{/images/} + ${countryInfo.cImg}" class="boxImg"><br>
                 <div class="country" th:text="${countryInfo.cName}"></div>
                 <div class="area" th:text="${countryInfo.cArea}"></div>
