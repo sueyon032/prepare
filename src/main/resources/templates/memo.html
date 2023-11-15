@@ -2,44 +2,45 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title th:text="${pageTitle}">Title</title>
+    <title>Prepare</title>
     <link th:href="@{/css/memo.css}" rel="stylesheet">
     <link th:href="@{/css/nav.css}" rel="stylesheet">
+    <link th:href="@{/images/logo.png}" rel="icon">
 </head>
 <body>
 
-<div class="memoContainer">
-    <div class="memo1Container">
-        <div class="memos">
-            <div class="memosText">여행 가기 전</div>
-            <textarea id="text1" th:placeholder="입력해주세요..."></textarea>
+<form th:action="@{/memo}" method="post">
+    <div class="memoContainer">
+        <div class="memo1Container">
+            <div class="memos">
+                <div class="memosText">여행 가기 전</div>
+                <textarea id="text1" placeholder="입력해주세요..."></textarea>
+            </div>
+            <div class="memos">
+                <div class="memosText">준비물</div>
+                <textarea id="text2" placeholder="입력해주세요..."></textarea>
+            </div>
         </div>
-        <div class="memos">
-            <div class="memosText">준비물</div>
-            <textarea id="text2" th:placeholder="입력해주세요..."></textarea>
+        <div class="memo2Container">
+            <div class="memos">
+                <div class="memosText">여행일정</div>
+                <textarea id="text3" placeholder="입력해주세요..."></textarea>
+            </div>
         </div>
     </div>
-
-    <div class="memo2Container">
-        <div class="memos">
-            <div class="memosText">여행일정</div>
-            <textarea id="text3" th:placeholder="입력해주세요..."></textarea>
-        </div>
-    </div>
-</div>
+    <button type="submit" class="saveBtn">저장하기</button>
+</form>
 
 <div class="footerNav">
     <footer>
         <nav class="footerNavbar">
             <ul>
-                <li><a href="#"><i class="bi bi-heart"></i></a></li>
+                <li><a th:href="@{/like}"><i class="bi bi-heart"></i></a></li>
                 <li><a th:href="@{/main}"><i class="bi bi-airplane-fill"></i></a></li>
                 <li><a th:href="@{/memo}"><i class="bi bi-pencil-square"></i></a></li>
             </ul>
         </nav>
     </footer>
 </div>
-
-
 </body>
 </html>
