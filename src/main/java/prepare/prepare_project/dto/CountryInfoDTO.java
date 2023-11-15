@@ -23,13 +23,23 @@ public class CountryInfoDTO {
     private Integer LTop;
 
     private String bInfo;
+    // private String bFlag;
+
     private String pFight;
     private String pVisa;
     private Double pRate;
     private String pPrice;
     private String pTime;
+
+
     private String rPlaceImg;
     private String rPlaceName;
+//    private String rPlaceImg1;
+//    private String rPlaceName1;
+//    private String rPlaceImg2;
+//    private String rPlaceName2;
+//    private String rPlaceImg3;
+//    private String rPlaceName3;
 
 
     public static CountryInfoDTO toCountryInfoDTO(CountryInfoEntity countryInfoEntity){
