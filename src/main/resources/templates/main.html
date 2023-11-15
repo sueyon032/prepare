@@ -7,13 +7,29 @@
   <link th:href="@{/css/nav.css}" rel="stylesheet">
 
   <link rel="icon" th:href="@{/images/logo.png}">
+
 </head>
 <body>
-<div class="mapContainer"><img th:src="@{/images/map.png}" class="mapPng">
-  <button th:each="countryInfo : ${countryInfoList}" th:style="'position: absolute; top: ' + ${countryInfo.lTop} + 'px; left: ' + ${countryInfo.lLeft} + 'px;'">
+<div class="mapContainer">
+  <img th:src="@{/images/map.png}" class="mapPng">
+  <button th:each="countryInfo, status : ${countryInfoList}"
+          th:style="'position: absolute; top: ' + ${countryInfo.lTop} + 'px; left: ' + ${countryInfo.lLeft} + 'px;'"
+          class="btn-open-popup country-btn"
+          th:id="'btnCountry' + ${status.index}">
     <img th:src="@{/images/} + ${countryInfo.cImg}" class="countryImg"><br>
     <div th:text="${countryInfo.cName}"></div>
   </button>
+</div>
+
+<div class="modal" id="countryModal">
+  <div class="modal_body">
+    <div th:each="countryInfo, status : ${countryInfoList}">
+      <div th:if="${countryInfo != null}" th:id="'modalCountryInfo' + ${status.index}" style="display: none;">
+        <div th:text="${countryInfo.cName}"></div>
+        <div th:text="${countryInfo.cArea}"></div>
+      </div>
+    </div>
+  </div>
 </div>
 
 <div class="footerNav">
