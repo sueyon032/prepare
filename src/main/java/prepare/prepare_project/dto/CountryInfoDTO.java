@@ -23,7 +23,7 @@ public class CountryInfoDTO {
     private Integer LTop;
 
     private String bInfo;
-    // private String bFlag;
+    private String bFlag;
 
     private String pFight;
     private String pVisa;
@@ -31,15 +31,12 @@ public class CountryInfoDTO {
     private String pPrice;
     private String pTime;
 
-
-    private String rPlaceImg;
-    private String rPlaceName;
-//    private String rPlaceImg1;
-//    private String rPlaceName1;
-//    private String rPlaceImg2;
-//    private String rPlaceName2;
-//    private String rPlaceImg3;
-//    private String rPlaceName3;
+    private String rPlaceImg1;
+    private String rPlaceName1;
+    private String rPlaceImg2;
+    private String rPlaceName2;
+    private String rPlaceImg3;
+    private String rPlaceName3;
 
 
     public static CountryInfoDTO toCountryInfoDTO(CountryInfoEntity countryInfoEntity){
@@ -52,6 +49,7 @@ public class CountryInfoDTO {
         countryInfoDTO.setLTop(countryInfoEntity.getLTop());
 
         countryInfoDTO.setBInfo(countryInfoEntity.getBInfo());
+        countryInfoDTO.setBFlag(countryInfoEntity.getBFlag());
 
         countryInfoDTO.setPFight(countryInfoEntity.getPFight());
         countryInfoDTO.setPVisa(countryInfoEntity.getPVisa());
@@ -59,8 +57,13 @@ public class CountryInfoDTO {
         countryInfoDTO.setPPrice(countryInfoEntity.getPPrice());
         countryInfoDTO.setPTime(countryInfoEntity.getPTime());
 
-        countryInfoDTO.setRPlaceImg(countryInfoEntity.getRPlaceImg());
-        countryInfoDTO.setRPlaceName(countryInfoEntity.getRPlaceName());
+        countryInfoDTO.setRPlaceImg1(countryInfoEntity.getRPlaceImg1());
+        countryInfoDTO.setRPlaceName1(countryInfoEntity.getRPlaceName1());
+        countryInfoDTO.setRPlaceImg2(countryInfoEntity.getRPlaceImg2());
+        countryInfoDTO.setRPlaceName2(countryInfoEntity.getRPlaceName2());
+        countryInfoDTO.setRPlaceImg3(countryInfoEntity.getRPlaceImg3());
+        countryInfoDTO.setRPlaceName3(countryInfoEntity.getRPlaceName3());
+
 
         return countryInfoDTO;
     }
