@@ -27,7 +27,7 @@ public class JoinController {
         System.out.println("memberDTO = " + joinDTO);
         joinService.save(joinDTO);
 
-        return "index";
+        return "redirect:index";
     }
 
     @GetMapping("/index-form")
@@ -41,7 +41,7 @@ public class JoinController {
         if (loginResult != null) {
             // login 성공
             session.setAttribute("loginId", loginResult.getMemberId());
-            return "main";
+            return "redirect:main";
         } else {
             // login 실패
             return "index";
