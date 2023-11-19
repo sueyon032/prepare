@@ -14,20 +14,21 @@
         <div class="memo1Container">
             <div class="memos">
                 <div class="memosText">여행 가기 전</div>
-                <textarea id="text1" placeholder="입력해주세요..."></textarea>
+                <textarea id="text1" placeholder="입력해주세요..." th:name="text1"></textarea>
             </div>
             <div class="memos">
                 <div class="memosText">준비물</div>
-                <textarea id="text2" placeholder="입력해주세요..."></textarea>
+                <textarea id="text2" placeholder="입력해주세요..." th:name="text2"></textarea>
             </div>
         </div>
         <div class="memo2Container">
             <div class="memos">
                 <div class="memosText">여행일정</div>
-                <textarea id="text3" placeholder="입력해주세요..."></textarea>
+                <textarea id="text3" placeholder="입력해주세요..." th:name="text3"></textarea>
             </div>
         </div>
     </div>
+    <input type="hidden" name="idx" th:value="${idx}">
     <button type="submit" class="saveBtn">저장하기</button>
 </form>
 

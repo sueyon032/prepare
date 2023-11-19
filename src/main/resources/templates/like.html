@@ -17,13 +17,23 @@
                 <div class="country" th:text="${countryInfo.cName}"></div>
                 <div class="area" th:text="${countryInfo.cArea}"></div>
             </div>
-            <div class="box"></div>
-            <div class="box"></div>
+            <div class="box" th:each="countryInfo : ${countryInfoList}" th:if="${countryInfo.cName == '영국'}">
+                <img th:src="@{/images/} + ${countryInfo.cImg}" class="boxImg"><br>
+                <div class="country" th:text="${countryInfo.cName}"></div>
+                <div class="area" th:text="${countryInfo.cArea}"></div>
+            </div>
+            <div class="box" th:each="countryInfo : ${countryInfoList}" th:if="${countryInfo.cName == '덴마크'}">
+                <img th:src="@{/images/} + ${countryInfo.cImg}" class="boxImg"><br>
+                <div class="country" th:text="${countryInfo.cName}"></div>
+                <div class="area" th:text="${countryInfo.cArea}"></div>
+            </div>
         </div>
         <div class="boxes">
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
+            <div class="box" th:each="countryInfo : ${countryInfoList}" th:if="${countryInfo.cName == '호주'}">
+                <img th:src="@{/images/} + ${countryInfo.cImg}" class="boxImg"><br>
+                <div class="country" th:text="${countryInfo.cName}"></div>
+                <div class="area" th:text="${countryInfo.cArea}"></div>
+            </div>
         </div>
     </div>
 </div>
